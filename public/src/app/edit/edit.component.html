@@ -1,0 +1,10 @@
+<h2>edit Product</h2>
+<p> {{ editProduct | json }}</p>
+<form (submit)="changeProduct()">
+  <input type="text" name="editProduct.title" [(ngModel)]="editProduct.title" placeholder="title">
+  <input type="number" name="editProduct.price" [(ngModel)]="editProduct.price" placeholder="price">
+  <input type="text" name="editProduct.url" [(ngModel)]="editProduct.url" placeholder="url">
+  <button [routerLink]="['/products']">cancel</button>
+  <button type="submit" value="submit">Create</button>
+  <p>{{errors | json }}</p> 
+</form>

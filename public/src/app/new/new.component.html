@@ -1,0 +1,10 @@
+<h2>create a New Product</h2>
+<p> {{ newProduct | json }}</p>
+<form (submit)="createProduct()">
+  <input type="text" name="newProduct.title" [(ngModel)]="newProduct.title" placeholder="title">
+  <input type="number" name="newProduct.price" [(ngModel)]="newProduct.price" placeholder="price">
+  <input type="text" name="newProduct.url" [(ngModel)]="newProduct.url" placeholder="url">
+  <button [routerLink]="['/products']">cancel</button>
+  <button type="submit" value="submit">Create</button>
+  <p>{{errors | json }}</p> 
+</form>
